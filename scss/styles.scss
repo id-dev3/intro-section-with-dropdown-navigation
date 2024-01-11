@@ -3,3 +3,95 @@
 @use 'globals/reset';
 @use 'globals/typography';
 
+header{
+    padding: 2rem 3rem;
+
+    /// NAVBAR SECTION
+    .navbar-container{
+        @include flex-setup;
+        justify-content: space-between;
+
+        .first-nav{
+            @include flex-setup;
+    
+            img{
+                width: 5.219rem;
+                height: 1.66144rem;
+                flex-shrink: 0;
+                margin-right: 2.5rem;
+            }
+    
+            .dropdown-links{
+                .dropdown-link{
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    margin-right: 2rem;
+    
+                    &:hover {
+                        .fa-chevron-down {
+                            color: $main-color;
+                            transform: rotate(180deg);
+                        }
+    
+                        .links{
+                            color: $secondary-color;
+                            // text-decoration: underline;
+                        }
+    
+                        .dropdown-content{
+                            display: block;
+                        }
+                    }
+    
+                    .links{
+                        color: $main-color;
+                        font-size: 0.875rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1rem;
+                        // display: flex;
+                        // align-items: center;
+                        transition: color .35s;
+                    }
+    
+                    .fa-chevron-down{
+                        font-size: .8rem;
+                        color: $main-color;
+                        margin-left: .2rem; 
+                        transition: transform .35s;
+                        transform-origin: center;
+                    }
+    
+                    .dropdown-content{
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: #fff;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                        min-width: 150px;
+                        margin-top: .1rem;
+                        padding: 10px;
+                        border-radius: 4px;
+    
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            
+                            color: #909090;
+                            padding: 8px 0;
+                            transition: background-color 0.2s;
+    
+                            &:hover{
+                                color: #2D2E40;
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
