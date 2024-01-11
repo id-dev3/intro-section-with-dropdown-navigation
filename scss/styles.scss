@@ -132,5 +132,71 @@ header{
 
     .hero-section{
         @include flex-setup;
+        margin-top: 2rem;
+        margin: 2rem 5rem 0 5rem;
+
+        .text-container{
+            flex: 1;
+
+            h1{
+                color: $secondary-color;
+                font-size: 5rem;
+                font-weight: 700;
+                line-height: 5rem;
+                letter-spacing: -0.06944rem;
+                margin-bottom: 2rem;
+                // width: 33.75rem;
+            }
+
+            p{
+                color: $main-color;
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 1.75rem;
+                width: 27.8125rem;
+                margin-bottom: 3rem;
+            }
+
+            .btn{
+                @extend p;
+                color: #fff;
+                font-size: 1rem;
+                letter-spacing: -0.01563rem;
+                border-radius: 0.9375rem;
+                background: $secondary-color;
+                flex-shrink: 0;
+                padding: 1rem 1.7rem;
+
+                &:hover{
+                    background: transparent;
+                    color: $secondary-color;
+                    border-radius: 0.9375rem;
+                    border: 1px solid
+                }
+            }
+
+            .sponsor{
+                margin-top: 4rem;
+                @include flex-setup;
+                gap: 0 30px;
+                margin-right: 3rem;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .image-container{
+            flex: 1;
+            text-align: right;
+
+            img{
+                width: 30rem;
+                height: 40rem;
+                flex-shrink: 0;
+            }
+        }
     }
 }
