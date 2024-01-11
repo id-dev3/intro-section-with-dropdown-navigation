@@ -129,4 +129,8 @@ header{
             }
         }
     }
+
+    .hero-section{
+        @include flex-setup;
+    }
 }
