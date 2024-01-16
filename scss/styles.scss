@@ -106,6 +106,10 @@ header{
             }
         }
 
+        .hamburger{
+            display: none;
+        }
+
         .second-nav{
             .sec-link{
                 color: $main-color;
@@ -212,10 +216,94 @@ header{
         padding: 0;
 
         .navbar-container{
-            padding: 2rem 1rem 1rem 1rem;
+            padding: 1.5rem 1rem;
+
             .first-nav{
                 .dropdown-links{
                     display: none;
+                    position: fixed;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    border-radius: .5rem;
+                    padding: 2rem;
+                    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+                    height: 40vh;
+                    width: 75%;
+                    overflow-y: auto;
+                    z-index: 50;
+                    opacity: 0;
+                    transition: opacity 0.4s ease, transform 0.4s ease;
+
+                    &.show{
+                        animation: fadeInUp 1s forwards;
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+
+                    @keyframes fadeInUp{
+                        from{
+                        opacity: 0;
+                        transform: translate(-50%, -50%) scale(0.8) translateY(30px);
+                        }
+
+                        to{
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1);
+                        }
+                    }
+
+                    .dropdown-link{
+                        display: flex;
+                        align-items: center;
+                        margin: auto auto auto auto;
+
+                        div{
+                            .links{
+                                font-size: 1.125rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hamburger{
+                display: block;
+                cursor: pointer;
+
+                input{
+                    display: none;
+
+                    &:checked{
+                        +{
+                            svg{
+                                transform: rotate(-45deg);
+
+                                .line-top-bottom{
+                                    stroke-dasharray: 20 300;
+                                    stroke-dashoffset: -32.42;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                svg{
+                    height: 3rem;
+                    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+
+                .line{
+                    fill: none;
+                    stroke: $secondary-color;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 3;
+                    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+    
+                .line-top-bottom{
+                    stroke-dasharray: 12 63;
                 }
             }
 
@@ -248,6 +336,7 @@ header{
 
                 p{
                     width: 100%;
+                    text-wrap: balance;
                 }
 
                 .sponsor{
