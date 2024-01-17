@@ -136,7 +136,7 @@ header{
     .hero-section{
         @include flex-setup;
         margin-top: 2rem;
-        margin: 2rem 5rem 0 5rem;
+        margin: 5rem 5rem 0 5rem;
 
         .text-container{
             flex: 1;
@@ -182,7 +182,7 @@ header{
             }
 
             .sponsor{
-                margin-top: 4rem;
+                margin-top: 6rem;
                 @include flex-setup;
                 gap: 0 30px;
                 margin-right: 3rem;
