@@ -229,7 +229,7 @@ header{
                     border-radius: .5rem;
                     padding: 2rem;
                     box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-                    height: 40vh;
+                    height: 45vh;
                     width: 75%;
                     overflow-y: auto;
                     z-index: 50;
@@ -256,7 +256,7 @@ header{
                     .dropdown-link{
                         display: flex;
                         align-items: center;
-                        margin: auto auto auto auto;
+                        margin: auto auto;
 
                         div{
                             .links{
