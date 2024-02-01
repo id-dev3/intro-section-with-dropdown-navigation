@@ -17,5 +17,5 @@ Preview it here - [Intro section with dropdown navigation](https://id-dev3.githu
 ## Author
 
 - Website - [Idris](https://id-dev3.github.io/)
-- Frontend Mentor - [@BlackFury117](https://www.frontendmentor.io/profile/BlackFury117)
+- Frontend Mentor - [@id-dev3](https://www.frontendmentor.io/profile/id-dev3)
 - Twitter - [@id_dev3](https://www.twitter.com/id_dev3)
